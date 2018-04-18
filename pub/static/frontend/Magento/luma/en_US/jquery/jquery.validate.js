@@ -1,1 +1,0 @@
-/var/www/html/famousfware/lib/web/jquery/jquery.validate.js
