@@ -1,0 +1,1 @@
+/var/www/html/famousfware/lib/web/mage/smart-keyboard-handler.js

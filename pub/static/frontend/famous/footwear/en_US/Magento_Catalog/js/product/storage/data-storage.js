@@ -1,0 +1,1 @@
+/var/www/html/famousfware/vendor/magento/module-catalog/view/frontend/web/js/product/storage/data-storage.js
