@@ -1,0 +1,38 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+
+?>
+<div class="block newsletter">
+    <div class="newslettertitle"><strong><?= $block->escapeHtml(__('JOIN THE GANG')) ?></strong></div>
+    <div class="content">
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <label class="label1" for="newsletter"><span><?= $block->escapeHtml(__("Sign up to our mailout and you'll receive all the deets on new arrivals,
+@ Copyright Famous Footwear
+what's back in stock and upcoming exclusive FF promotions.")) ?></span></label>
+                <div class="control">
+                    <input name="email" type="email" id="newsletter"
+                                placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>"
+                                data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Sign Up')) ?>" type="submit">
+                    <span><?= $block->escapeHtml(__('Sign Up')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
