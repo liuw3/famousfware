@@ -4,6 +4,7 @@ return array (
   array (
     'Core_Overridefiles' => 1,
     'Magento_Store' => 1,
+    'FF_Homepage' => 1,
     'Magento_Directory' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Config' => 1,
@@ -119,6 +120,7 @@ return array (
     'Magento_CatalogWidget' => 1,
     'Dotdigitalgroup_Email' => 1,
     'Magento_WishlistAnalytics' => 1,
+    'Magestore_Bannerslider' => 1,
     'Shopial_Facebook' => 1,
     'Temando_Shipping' => 1,
   ),

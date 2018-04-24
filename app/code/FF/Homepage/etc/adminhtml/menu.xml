@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="FF_Homepage::ff_head" title="Famous Footwear Modules" module="FF_Homepage" sortOrder="100" resource="FF_Homepage::ff_head" />
+        <add id="FF_Homepage::promobanners" title="Promotional Banners" module="FF_Homepage" sortOrder="10" parent="FF_Homepage::ff_head" action="homepage/promobanner" resource="FF_Homepage::promobanners" />
+        
+    </menu>
+</config>

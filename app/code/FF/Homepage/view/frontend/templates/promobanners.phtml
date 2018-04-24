@@ -1,0 +1,12 @@
+<?php
+
+$banners = $block->getPromotionalbanners();
+
+?>
+<?php if($banners->getSize()>0): ?>
+<ul class="promotions">  
+<?php foreach ($banners as $item) { ?>
+    <li><?php echo $item->getTitle() ?></li>
+<?php } ?>
+</ul> 
+<?php endif; ?>

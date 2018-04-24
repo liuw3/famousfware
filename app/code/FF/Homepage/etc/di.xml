@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Create our type PromobannerGridDataProvider -->
+    <virtualType name="PromobannerGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">FF\Homepage\Model\Resource\Promobanner\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">PromobannerGridFilterPool</argument> <!-- Define new object for filters -->
+        </arguments>
+    </virtualType>
+ 
+    <!-- Create our type PromobannerGridFilterPool -->
+    <virtualType name="PromobannerGridFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+ 
+    <!-- Type for homepage_promobanner_listing_data_source -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="homepage_promobanner_listing_data_source" xsi:type="string">FF\Homepage\Model\ResourceModel\Grid\Promobanner\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+ 
+    <!-- Simulate our class FF\Jobs\Model\ResourceModel\Grid\Promobanner\Collection -->
+    <virtualType name="FF\Homepage\Model\ResourceModel\Grid\Promobanner\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">homepage_promobanners</argument>
+            <argument name="resourceModel" xsi:type="string">FF\Homepage\Model\ResourceModel\Promobanner</argument>
+        </arguments>
+    </virtualType>
+</config>
