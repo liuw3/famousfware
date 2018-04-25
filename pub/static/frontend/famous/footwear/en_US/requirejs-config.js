@@ -634,6 +634,55 @@ require.config(config);
 })();
 (function() {
 var config = {
+	map: {
+		'*': {
+			'magestore/note': 'Magestore_Bannerslider/js/jquery/slider/jquery-ads-note',
+			'magestore/impress': 'Magestore_Bannerslider/js/report/impress',
+			'magestore/clickbanner': 'Magestore_Bannerslider/js/report/clickbanner',
+		},
+	},
+	paths: {
+		'magestore/flexslider': 'Magestore_Bannerslider/js/jquery/slider/jquery-flexslider-min',
+		'magestore/evolutionslider': 'Magestore_Bannerslider/js/jquery/slider/jquery-slider-min',
+		'magestore/popup': 'Magestore_Bannerslider/js/jquery.bpopup.min',
+	},
+	shim: {
+		'magestore/flexslider': {
+			deps: ['jquery']
+		},
+		'magestore/evolutionslider': {
+			deps: ['jquery']
+		},
+		'magestore/zebra-tooltips': {
+			deps: ['jquery']
+		},
+	}
+};
+
+require.config(config);
+})();
+(function() {
+/**
+ * Solwin Infotech
+ * Solwin Featured Product Extension
+ * 
+ * @category   Solwin
+ * @package    Solwin_FeaturedPro
+ * @copyright  Copyright © 2006-2016 Solwin (https://www.solwininfotech.com)
+ * @license    https://www.solwininfotech.com/magento-extension-license/
+ */
+
+var config = {
+    map: {
+        '*': {
+            cpowlcarousel: 'Solwin_FeaturedPro/js/owl.carousel'
+        }
+    }
+};
+require.config(config);
+})();
+(function() {
+var config = {
     paths: {
         temandoCheckoutFieldsDefinition: 'Temando_Shipping/js/model/fields-definition',
         temandoCustomerAddressRateProcessor: 'Temando_Shipping/js/model/shipping-rate-processor/customer-address',

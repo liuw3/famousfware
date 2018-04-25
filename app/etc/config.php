@@ -121,7 +121,10 @@ return array (
     'Dotdigitalgroup_Email' => 1,
     'Magento_WishlistAnalytics' => 1,
     'Magestore_Bannerslider' => 1,
+    'ProgrammingAtKstark_CatewithimgWidget' => 1,
     'Shopial_Facebook' => 1,
+    'Solwin_Core' => 1,
+    'Solwin_FeaturedPro' => 1,
     'Temando_Shipping' => 1,
   ),
 );

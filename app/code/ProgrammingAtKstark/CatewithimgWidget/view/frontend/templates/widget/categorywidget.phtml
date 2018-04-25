@@ -1,0 +1,26 @@
+<?php
+
+    $categories = $this->getCategoryCollection();
+    $categoryHelper = $this->getCategoryHelper();
+?>
+
+        <?php
+        foreach($categories as $category):
+            $cat = $this->getCategorymodel($category->getId());
+            $image = $cat->getImageUrl();
+
+        ?>
+            <?php if($image != null): ?>
+            	<a class="block-promo" href="<?php echo $cat->getUrl(); ?>">
+            		<img src="<?php echo $image; ?>" alt="<?php echo $cat->getName(); ?>" />
+            		<span>
+                            <strong class="title"><?php echo $cat->getName(); ?></strong>
+                            <span class="info"><strong><?php echo $this->getMainTitle(); ?></strong> </span>
+                    </span>
+                    <div><button class="action more"><?php echo $this->getTagLine(); ?></button></div>
+               
+                </a>
+            
+            <?php endif; ?>
+        <?php endforeach; ?>
+       

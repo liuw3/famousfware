@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="programmingatkstark_catewithimgwidget" class="ProgrammingAtKstark\CatewithimgWidget\Block\Widget\CatewithimgWidget">
+		<label translate="true">Category List with image Widget - Narrow</label>
+		<description>Store Default 1st level Category List Widget - Narrow</description>
+		<parameters>
+            <parameter name="blocktitle" xsi:type="text"  visible="true" required="true" sort_order="1">
+                <label translate="true">Block Title</label>
+            </parameter>
+            <parameter name="tagline" xsi:type="text"  visible="true" required="true" sort_order="2">
+                <label translate="true">Tag Line</label>
+            </parameter>
+			<!--<parameter name="parentcat"  xsi:type="multiselect"  visible="true" sort_order="3" source_model="ProgrammingAtKstark\CatewithimgWidget\Model\Config\Source\Categorylist">
+                <label translate="true">Select Categories (Any three) </label>
+                <description translate="true">Category must have image uploaded</description>
+            </parameter>-->
+            <parameter name="id_path" xsi:type="block" visible="true" required="true" sort_order="10">
+                <label translate="true">Category</label>
+                <block class="Magento\Catalog\Block\Adminhtml\Category\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Category...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            
+		</parameters>
+	</widget>
+    <widget id="programmingatkstark_catewithimgwidgetwide" class="ProgrammingAtKstark\CatewithimgWidget\Block\Widget\CatewithimgWidgetwide">
+        <label translate="true">Category List with image Widget - Wide</label>
+        <description>Store Default 1st level Category List Widget - Narrow</description>
+        <parameters>
+            <parameter name="blocktitle" xsi:type="text"  visible="true" required="true" sort_order="1">
+                <label translate="true">Block Title</label>
+            </parameter>
+            <parameter name="tagline" xsi:type="text"  visible="true" required="true" sort_order="2">
+                <label translate="true">Tag Line</label>
+            </parameter>
+            <!--<parameter name="parentcat"  xsi:type="multiselect"  visible="true" sort_order="3" source_model="ProgrammingAtKstark\CatewithimgWidget\Model\Config\Source\Categorylist">
+                <label translate="true">Select Categories (Any three) </label>
+                <description translate="true">Category must have image uploaded</description>
+            </parameter>-->
+            <parameter name="id_path" xsi:type="block" visible="true" required="true" sort_order="10">
+                <label translate="true">Category</label>
+                <block class="Magento\Catalog\Block\Adminhtml\Category\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Category...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            
+        </parameters>
+    </widget>
+     <widget id="programmingatkstark_catewithimgwidgetbottom" class="ProgrammingAtKstark\CatewithimgWidget\Block\Widget\CatewithimgWidgetbottom">
+        <label translate="true">Category List with image Widget - Bottom</label>
+        <description>Store Default 1st level Category List Widget - Bottom</description>
+        <parameters>
+            <parameter name="blocktitle" xsi:type="text"  visible="true" required="true" sort_order="1">
+                <label translate="true">Block Title</label>
+            </parameter>
+            <parameter name="tagline" xsi:type="text"  visible="true" required="true" sort_order="2">
+                <label translate="true">Tag Line</label>
+            </parameter>
+            <!--<parameter name="parentcat"  xsi:type="multiselect"  visible="true" sort_order="3" source_model="ProgrammingAtKstark\CatewithimgWidget\Model\Config\Source\Categorylist">
+                <label translate="true">Select Categories (Any three) </label>
+                <description translate="true">Category must have image uploaded</description>
+            </parameter>-->
+            <parameter name="id_path" xsi:type="block" visible="true" required="true" sort_order="10">
+                <label translate="true">Category</label>
+                <block class="Magento\Catalog\Block\Adminhtml\Category\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Category...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            
+        </parameters>
+    </widget>
+</widgets>
