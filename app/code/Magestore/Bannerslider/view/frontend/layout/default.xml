@@ -70,12 +70,12 @@
     			</action>
     		</block>
     	</referenceBlock>
-    	<referenceBlock name="page.top">
+    	<!--<referenceBlock name="page.top">
     		<block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.menu.bottom" >
     			<action method="setPosition">
     				<argument name="position" xsi:type="string">menu-bottom</argument>
     			</action>
     		</block>
-    	</referenceBlock>
+    	</referenceBlock>-->
     </body>
 </page>

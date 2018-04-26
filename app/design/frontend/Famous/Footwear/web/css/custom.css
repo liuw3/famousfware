@@ -1,0 +1,537 @@
+/*** Fonts : Famous Footwear ***/
+* {
+    font-size: 100%;
+  
+    letter-spacing: 0.5px;
+}
+strong, h1, h2, h2, h3, h4, h5, h6{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*** CSS Rules for General elements **/
+.action.primary {
+    background-image: none;
+    background: #fff;
+    border: 2px solid #363436;
+    color: #363436;
+    border-radius: 0px;
+    font-weight:300;
+}
+
+h3 {
+    color: #9B7C75;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+body {
+    color: #363436;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:visited, .alink:visited {
+    color: #363437;
+    text-decoration: none;
+}
+
+a, .alink {
+    color: #363436;
+    text-decoration: none;
+}
+
+@media (min-width: 768px){
+    
+    .header.content {
+        padding-top:0px;
+    }
+
+    /** Section: Top panel **/
+    .navigation, .breadcrumbs, .page-header .header.panel, .header.content, .footer.content, .page-wrapper > .widget, .page-wrapper > .page-bottom, .block.category.event, .top-container, .page-main {
+        max-width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .header.panel > .header.links{
+        margin-right: 10px;
+    }
+    .page-header .header.panel{
+        padding-bottom: 0px;
+        padding-top: 20px;
+        vertical-align: bottom;
+    }
+    
+    .header.panel > .header.links > li > a {
+        color: #363436;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    ul.header.links li img {
+        width: 70%;
+    }
+
+    ul.header.links {
+        color: #363436;
+    }
+
+    ul.header.links a {
+        font-size: 12px;
+    }
+
+    button.action.search img {
+        width: 70%;
+        margin-top: 12px;
+    }
+
+    input#search {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #59595c;    
+        width: 85%;
+    }
+
+    .block-search .action.search:before {
+        display: none;
+    }
+
+    .block-search{
+        margin-top: 25px;
+    }
+
+    .page-header .panel.wrapper {
+        background-color: #fff;
+    }
+    /** Section: Navigation **/
+    .navigation {
+        background: #fff;
+        font-weight: 400;
+        height: inherit;
+        left: auto;
+        overflow: inherit;
+        padding: 0;
+        position: relative;
+        top: 0;
+        width: 54%;
+        z-index: 3;
+        display: inline-block;
+        margin: 0px auto;
+        margin-left: 3%;
+        text-transform: uppercase;
+        margin-top: 25px;
+        font-size: 13px;
+    }
+    .navigation .level0 {
+        margin: 0 0px 0 0;
+    }
+    /** Section: Promotions **/
+    .promotions-slider-sm {
+        /** hide promotions slider for mobile at desktop ***/
+        display:none; 
+    }
+    .promotions li {
+        width: 32%;
+        display: inline-block;
+        padding: 15px 0px;
+        color: #fff;
+        border-right: 1px solid #fff;
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    .promotions li:last-child {
+        border-right: none;
+    }
+
+    .promotions {
+        background: #363436;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    
+    /** Section: Slider ***/
+    .slider-sm {
+        /** hide mobile slider at desktop ***/
+        display: none;
+    }
+    .slider-heading {
+        position: absolute;
+        top: 8%;
+        text-align: center;
+        left: 33%;
+        color: #fff;
+        font-size: 81px;
+    }
+    .slider-btn{
+        background: none;
+        border: 0px;
+        outline: none!important;
+        box-shadow: none!important;
+        border-right: 2px solid #fff;
+        border-left: 2px solid #fff;
+        border-radius: 0px;
+        color: #fff;
+        font-size: 21px;
+    }
+
+    /** Section: Top 4 Featured products Home Page **/
+    .content-wrapper-home {
+        padding-top: 2.5rem;
+        width: 100%;
+        text-align: center;
+        margin: 0px auto;
+    }
+    .promo-section li{
+       
+        display: inline-block;
+        vertical-align: top;
+    }
+    .promo-section li.narrow {
+        width:30%;
+    }
+
+    .promo-section li.wide {
+        width:60%;
+    }
+
+    .block.widget.block-products-list.grid {
+        background: #f5f5f5;
+        padding-top: 20px;
+    }
+    
+    .products-grid.grid {
+        margin: 0px auto;
+        text-align: center;
+    }
+    .content-heading:before{
+        background: none!important;
+    }
+    .page-header .panel.wrapper{
+        border-bottom: 0px!important; 
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    /*** Three promotional block ***/
+    .promotional-blocks li{
+        width: 33%;
+        display: inline-block;
+    }
+
+    .special-Promotional-Banner{
+        background: #F1F1F2;
+        padding: 50px 35px;
+        margin: 2.25rem;
+    }
+
+    .special-Promotional-Banner li{
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .special-Promotional-Banner li:first-child{ 
+        border-right: 1px solid #ccc;
+    }
+    .special-Promotional-Banner div{
+        float:left;
+    }
+
+    .special-Promotional-Banner div img{ 
+        width:40%;
+    }
+
+    .promotional-blocks-insta{
+        margin-top:2.25rem;    
+    }
+
+    .promotional-blocks-insta li{
+        width: 19%;
+        display: inline-block;
+    }
+
+    /**Featured products homepage **/
+    .featured_products_sm {
+        /** Hide mobile featured products slider **/
+        display: none;
+    }
+
+    /**instagram section ***/
+    .insta{
+        margin-top:30px;
+    }
+
+    /** Footer columns width desktop **/
+    ul.footer.links {
+        width: 14%;
+    }
+
+    ul.social-icons {
+        text-align: right;
+        padding-right: 0px!important;
+    }
+    li.social {
+        display: inline-block;
+        padding-left: 16px;
+    }
+   
+}
+
+
+.navigation .level0 > .level-top{
+    color: #363436;
+    font-size: 14px;
+}
+
+/** Top 4 featured products homepage **/
+button.action.more {
+    background: none;
+    border: 2px solid #000;
+    padding: 20px 20px;
+    border-radius: 0px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    width: 180px;
+}
+.product-item-details img{
+    width:4%;
+    vertical-align: middle;
+}
+
+/*** Footer CSS ***/
+.page-footer{
+    background: #f5f5f5;
+    border-bottom: 1px solid #c2c3c4;
+}
+.footer.content .links li {
+    line-height: 11px;
+}
+
+.footer.content .links a:visited {
+    color: #363436;
+}
+.footer.content .links a {
+    color: #363436;
+    font-size: 13px;
+}
+li.nav.item {
+    line-height: 12px;
+}
+
+/** Footer Newsletetr Block CSS **/
+.block.newsletter {
+    width: 25%;
+}
+.block.newsletter p {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+.block.newsletter .field .control:before {
+    display: none;
+}
+.block.newsletter .action.subscribe {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -1px;
+    background: #E4B6AA;
+    border: none;
+    padding: 12px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 11px;
+}
+.block.newsletter input {
+    border: none;
+    height:40px;
+}
+
+/*** social icons footer **/
+.empty-space{
+    height:30px;
+}
+
+li.social {
+    display: inline-block;  
+}
+li.social img {
+    width: 80%;
+}
+
+/** copyright block css ***/
+
+.copyright{
+    background-color: #f5f5f5;
+    color: #363436;
+    padding: 20px 35px;
+    font-size: 11px;
+}
+.copyright-right{
+    float: right;
+}
+.copyright-left{
+    text-align: left; float: left;
+}
+@media (max-width: 768px){
+    /** media queries for mobile **/
+
+    /*** promotions text slider mobile ***/
+    .promotions {
+        /** hide promotions for desktop at mobile ***/
+        display: none;
+    }
+
+    .promotions-slider-sm {
+        background: #000;
+        color: #fff;
+        /* border: 1px solid red; */
+        padding: 16px 10px;
+        margin-top: 0px;
+        /* padding-top: 0px; */
+    }
+
+    .item-1, 
+    .item-2, 
+    .item-3 {
+        position: absolute;
+        display: block;
+        top: 8em;
+
+        width: 100%;
+
+        animation-duration: 20s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .item-1{
+        animation-name: anim-1;
+    }
+
+    .item-2{
+        animation-name: anim-2;
+    }
+
+    .item-3{
+        animation-name: anim-3;
+    }
+
+    @keyframes anim-1 {
+        0%, 8.3% { left: -100%; opacity: 0; }
+      8.3%,25% { left: 25%; opacity: 1; }
+      33.33%, 100% { left: 110%; opacity: 0; }
+    }
+
+    @keyframes anim-2 {
+        0%, 33.33% { left: -100%; opacity: 0; }
+      41.63%, 58.29% { left: 25%; opacity: 1; }
+      66.66%, 100% { left: 110%; opacity: 0; }
+    }
+
+    @keyframes anim-3 {
+        0%, 66.66% { left: -100%; opacity: 0; }
+      74.96%, 91.62% { left: 25%; opacity: 1; }
+      100% { left: 110%; opacity: 0; }
+    }
+
+    /** promotions text slider mobile ends here ***/
+
+    /*** Mobile Slider CSS ***/
+    .slider-desktop {
+        /** hide desktop slider **/
+        display: none;
+    }
+
+    .slider-heading-sm {
+        position: absolute;
+        top: 46%;
+        left: 16%;
+        text-align: center;
+        color:#fff;
+    }
+
+    /***  Mobile Slider CSS ends here***/
+
+    /*** 4 collections homepage ***/
+    .block-promo-wrapper.block-promo-hp {
+        padding: 0px 15px;
+    }
+
+    ul.promo-section {
+        text-align: center;
+        margin: 0px auto;
+        padding-left: 0px;
+        margin-top: 1.5rem;
+    }
+
+    /** 4 collections homepage css ends here **/
+
+    /** Three collections homepage **/
+    ul.promotional-blocks {
+        text-align: center;
+        margin: 0px auto;
+        padding: 0px 15px;
+    }
+
+    ul.promotional-blocks li {
+        text-align: center;
+    }
+    /** Three collections homepage ends here**/
+
+
+    ol.product-items.widget-product-grid {
+        text-align: center;
+    }
+    ul li{
+        list-style-type: none;
+    }
+
+    .block.newsletter {
+        width: 100%;
+    }
+
+    nav.navigation {
+        display: none;
+    }
+
+
+    .insta {
+        text-align: center;
+
+    }
+
+    /** hide desktop insta feed on mobile **/
+
+    ul.promotional-blocks-insta {
+        display: none;
+    }
+
+    /** featured products mobile **/
+    /* external css: flickity.css */
+
+    .carousel {
+      background: #EEE;
+    }
+
+    .carousel-cell {
+      width: 50%;
+      height: 200px;
+      margin-right: 10px;
+      background: #8C8;
+      border-radius: 5px;
+      counter-increment: gallery-cell;
+    }
+
+    /* cell number */
+    .carousel-cell:before {
+      display: block;
+      text-align: center;
+      content: none;
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+    }
+
+
+
+}

@@ -11,28 +11,31 @@
         
 
         <move element="navigation.sections" destination="header-wrapper" after="top.search" />
-        <referenceContainer name="header-wrapper">
-            <container name="cmsblockafternaivgation" htmlClass="cmsblockheader" htmlTag="div" after="navigation.sections">
-                <block class="Magento\Cms\Block\Block" name="cmslinks1">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">header-header-offer-block</argument>
-                    </arguments>
-                </block>
+        <referenceContainer name="page.wrapper">
+            <container name="cmsblockafternaivgation" after="header.container" htmlTag="div" htmlClass="section-item-content" before="main.content">
+                
+                    <block class="Magento\Cms\Block\Block" name="cmslinks1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">header-header-offer-block</argument>
+                        </arguments>
+                    </block>
+                
             </container>
         </referenceContainer>
-        <referenceBlock name="footer_links" remove="true" />
+         <referenceContainer name="page.wrapper">
+            <container name="bugreport" after="footer-container" />
+ 
+        </referenceContainer>
         <referenceContainer name="footer">
-            <block class="Magento\Cms\Block\Block" name="cmslinks" before="-">
+
+            <block class="Magento\Cms\Block\Block" name="cmslinks" after="form.subscribe">
                 <arguments>
                     <argument name="block_id" xsi:type="string">homepage-footer-cmsblock</argument>
                 </arguments>
             </block>
-            <block class="Magento\Cms\Block\Block" name="sociallinks" after="cmslinks">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">homepage-footer-social-block</argument>
-                </arguments>
-            </block>
+           
         </referenceContainer>
+
         <referenceContainer name="header.panel">
             <block class="Magento\Cms\Block\Block" name="cmslinksheader">
                 <arguments>
@@ -85,6 +88,8 @@
             </block>
         </referenceContainer>
         <referenceBlock name="top.links" remove="true" />
+        <referenceBlock name="footer_links" remove="true" />
+        <move element="copyright" destination="bugreport" />
        
     </body>
 </page>
