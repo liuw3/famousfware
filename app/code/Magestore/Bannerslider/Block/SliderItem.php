@@ -181,7 +181,6 @@ class SliderItem extends \Magento\Framework\View\Element\Template
         $slider = $this->_sliderFactory->create()->load($this->_sliderId);
         if ($slider->getId()) {
             $this->setSlider($slider);
-
             if ($slider->getStyleContent() == SliderModel::STYLE_CONTENT_NO) {
                 $this->setTemplate(self::STYLESLIDE_CUSTOM_TEMPLATE);
             } else {

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <referenceContainer name="product.info.stock.sku" remove="true" />
+        <referenceContainer name="product.info.review" remove="true" />
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="product.info.mailto" remove="true" />
+        <referenceContainer name="product.info.social">
+	        <referenceBlock name="product.info.addto">
+	        	<block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/sizeguide.phtml" before="view.addto.wishlist" />
+	        </referenceBlock>	
+	    </referenceContainer>
+	    <referenceContainer name="product.info.main">
+	    	<container name="verticaltabs" label="vertical_tabs" htmlTag="div" htmlClass="vertical_tabs" htmlId="vertical_tabs">
+	    		
+	    		<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.overview" template="Magento_Catalog::product/view/customattribute.phtml" group="detailed_info" after="product.info.extrahint">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getShortDescription</argument>
+                        <argument name="at_code" xsi:type="string">short_description</argument>
+                        <argument name="css_class" xsi:type="string">overview</argument>
+                        <argument name="at_label" xsi:type="string">Description</argument>
+                        <argument name="title" translate="true" xsi:type="string">Overview</argument>
+                        
+                    </arguments>
+                </block>
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.overview11" template="Magento_Catalog::product/view/customattribute.phtml" group="detailed_info" after="product.info.extrahint">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getShortDescription</argument>
+                        <argument name="at_code" xsi:type="string">description</argument>
+                        <argument name="css_class" xsi:type="string">overview</argument>
+                        <argument name="at_label" xsi:type="string">Short Description</argument>
+                        <argument name="title" translate="true" xsi:type="string">Overview</argument>
+                        
+                    </arguments>
+                </block>
+            </container>    
+	    </referenceContainer>
+	</body>
+</page>
