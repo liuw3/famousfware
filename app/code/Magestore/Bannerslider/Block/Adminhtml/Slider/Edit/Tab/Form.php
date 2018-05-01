@@ -46,6 +46,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
      * @var \Magestore\Bannerslider\Helper\Data
      */
     protected $_bannersliderHelper;
+    protected $_wysiwygConfig;
 
     /**
      * [__construct description].
@@ -63,10 +64,12 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         \Magestore\Bannerslider\Helper\Data $bannersliderHelper,
         \Magento\Framework\Registry $registry,
         \Magento\Framework\Data\FormFactory $formFactory,
+        \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig,
         \Magento\Config\Model\Config\Structure\Element\Dependency\FieldFactory $fieldFactory,
         array $data = []
     ) {
         $this->_bannersliderHelper = $bannersliderHelper;
+        $this->_wysiwygConfig = $wysiwygConfig;
         $this->_fieldFactory = $fieldFactory;
         parent::__construct($context, $registry, $formFactory, $data);
     }
@@ -169,7 +172,9 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'name' => 'custom_code',
                 'label' => __('Custom slider'),
                 'title' => __('Custom slider'),
-                'wysiwyg' => true,
+                'style'     => 'width:600px; height:300px;',
+                'wysiwyg'   => true,
+                'config'    => $this->_wysiwygConfig->getConfig(),
                 'required' => false,
             ]
         );

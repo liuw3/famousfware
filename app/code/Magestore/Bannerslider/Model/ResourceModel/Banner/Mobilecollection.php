@@ -20,15 +20,20 @@
  * @license     http://www.magestore.com/license-agreement.html
  */
 
-               // echo "Tatat".$banner->getCaption();
-                ?>
+namespace Magestore\Bannerslider\Model\ResourceModel\Banner;
 
-<?php if ($block->isShowTitle() == 1) :
-?>
-<div class="magestore-bannerslider-title" style="font: bold 12px/16px Arial, Helvetica, sans-serif;text-transform: uppercase;color: #e26703;">
-	<strong><span><?php echo $block->escapeHtml($block->getSlider()->getTitle()); ?></span></strong>
-</div>
-<?php endif; ?>
-<div class="magestore-bannerslider-custom">
-	<?php echo $block->getSlider()->getCustomCode(); ?>
-</div>
+/**
+ * Banner Collection
+ * @category Magestore
+ * @package  Magestore_Bannerslider
+ * @module   Bannerslider
+ * @author   Magestore Developer
+ */
+class Mobilecollection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
+{
+    protected $_idFieldName = 'banner_id';
+    protected function _construct()
+    {
+        $this->_init('Magestore\Bannerslider\Model\Banner', 'Magestore\Bannerslider\Model\ResourceModel\Banner');
+    }
+}

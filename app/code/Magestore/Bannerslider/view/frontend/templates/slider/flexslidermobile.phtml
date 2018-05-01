@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Magestore
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magestore.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.magestore.com/license-agreement.html
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Magestore
+ * @package     Magestore_Bannerslider
+ * @copyright   Copyright (c) 2012 Magestore (http://www.magestore.com/)
+ * @license     http://www.magestore.com/license-agreement.html
+ */
+
+?>
+<?php
+
+
+$styleSlide = $block->getSlider()->getStyleSlide();
+$slider = $block->setSliderId(4);
+$htmlId   = $block->getFlexsliderHtmlId();
+$bannerCollection1 = $block->getMobileBannerCollection();
+?>
+<div class="slider-sm">
+	<ul class="slides">
+	<?php
+	foreach ($bannerCollection1 as $banner1):?>
+
+	 <li data-thumb="<?php echo $block->getBannerImageUrl($banner1) ?>">
+	 
+	 <p class="flex-caption"><?php echo $banner1->getCaption(); ?></p>
+	                        <a href="<?php echo $banner1->getClickUrl() ?>" target="<?php echo $banner1->getTargetValue() ?>" style="display:block;" data-mage-init='{"magestore/clickbanner": {"url": "<?php echo $this->getUrl("bannerslider/index/click") ?>", "slider_id": "<?php echo $banner1->getSliderId() ?>", "banner_id": "<?php echo $banner1->getId() ?>" }}' >
+	                            <img style="width:100%" alt="<?php echo $banner1->getImageAlt() ?>" src="<?php echo $block->getBannerImageUrl($banner1) ?>"/>
+	                        </a>
+	                        
+	                    </li>
+	<?php
+
+	endforeach;    
+	?>
+	</ul>
+</div>

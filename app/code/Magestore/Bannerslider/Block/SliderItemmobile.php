@@ -32,7 +32,7 @@ use Magestore\Bannerslider\Model\Status;
  * @module   Bannerslider
  * @author   Magestore Developer
  */
-class SliderItem extends \Magento\Framework\View\Element\Template
+class SliderItemmobile extends \Magento\Framework\View\Element\Template
 {
     /**
      * template for evolution slider.
@@ -129,7 +129,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Magestore\Bannerslider\Model\ResourceModel\Banner\Collection $bannerCollectionFactory,
+        \Magestore\Bannerslider\Model\ResourceModel\Banner\Mobilecollection $bannerCollectionFactory,
         \Magestore\Bannerslider\Model\SliderFactory $sliderFactory,
         SliderModel $slider,
         \Magento\Framework\Stdlib\DateTime\DateTime $stdlibDateTime,
@@ -163,7 +163,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
         if (!$configEnable
             || $this->_slider->getStatus() === Status::STATUS_DISABLED
             || !$this->_slider->getId()
-            || !$this->getBannerCollection()->getSize()) {
+            || !$this->getMobileBannerCollection()->getSize()) {
             return '';
         }
 
@@ -225,7 +225,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
                 break;    
             // Flex slide
             default:
-          
+            
                 $this->setTemplate(self::STYLESLIDE_FLEXSLIDER_TEMPLATE1);
                 break;
         }
@@ -241,14 +241,23 @@ class SliderItem extends \Magento\Framework\View\Element\Template
      *
      * @return \Magestore\Bannerslider\Model\ResourceModel\Banner\Collection
      */
-    public function getBannerCollection()
+    public function getMobileBannerCollection()
     {
-       $sliderId = $this->_slider->getId();
+        $sliderId = $this->_slider->getId();
+        $dateTimeNow = $this->_stdTimezone->date()->format('Y-m-d H:i:s');
 
-        return $this->_bannerCollectionFactory->getBannerCollection($sliderId);
+        $collection = $this->_bannerCollectionFactory
+                    ->addFieldToFilter('slider_id', $sliderId)
+                     ->addFieldToFilter('status', \Magestore\Bannerslider\Model\Status::STATUS_ENABLED)
+            ->addFieldToFilter('start_time', ['lteq' => $dateTimeNow])
+            ->addFieldToFilter('end_time', ['gteq' => $dateTimeNow])
+            ->setOrder('order_banner', 'ASC');
+            
+        //echo $collection->getSelect();
+        return $collection;
     }
    
-  
+   
     /**
      * get first banner.
      *

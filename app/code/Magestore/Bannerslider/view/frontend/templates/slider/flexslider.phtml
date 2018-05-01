@@ -124,7 +124,8 @@ $bannerCollection = $block->getBannerCollection();
     });
 })();
 </script>
-<div class="magestore-bannerslider-standard" data-mage-init='{"magestore/impress": {"url": "<?php echo $this->getUrl("bannerslider/index/impress") ?>", "slider_id": "<?php echo $block->getSlider()->getId() ?>"}}'>
+
+<div class="magestore-bannerslider-standard slider-desktop" data-mage-init='{"magestore/impress": {"url": "<?php echo $this->getUrl("bannerslider/index/impress") ?>", "slider_id": "<?php echo $block->getSlider()->getId() ?>"}}'>
     <?php if ($block->isShowTitle() == \Magestore\Bannerslider\Model\Slider::SHOW_TITLE_YES) :
     ?>
         <div class="magestore-bannerslider-title" style="font: bold 12px/16px Arial, Helvetica, sans-serif;text-transform: uppercase;color: #e26703;">
@@ -176,6 +177,7 @@ $bannerCollection = $block->getBannerCollection();
         <?php endif; ?>
     </div>
 </div>
+
 <style>
     .flex-viewport .slides li{
         margin-bottom: 0px !important;
