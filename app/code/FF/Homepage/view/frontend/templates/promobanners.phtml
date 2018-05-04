@@ -1,66 +1,17 @@
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <?php
 
 $banners = $block->getPromotionalbanners();
 $cnt = 0;
 ?>
 <?php if($banners->getSize()>0): ?>
-<div class="section-item-content" id="store.menu" data-role="content" role="tabpanel" aria-hidden="false">	
+
 <ul class="promotions">  
 <?php foreach ($banners as $item) { ?>
     <li><?php echo $item->getTitle() ?></li>
 <?php } ?>
 </ul> 
-</div>
-<?php endif; ?>
-<?php if($banners->getSize()>0): ?>
-<div class="promotions-slider-sm">
 
-		<?php foreach ($banners as $item) { $cnt++; ?>
-
-    <p class="item-<?php echo $cnt; ?>"><?php echo $item->getTitle() ?></p>
-<?php } ?>
-                       
-                      
-
-
-                    </div>
 <?php endif; ?>
 
-<script type="text/javascript">
 
-window.onload = function() {
 
-var width = 100;
-var animation_speed = 700;
-var time_val = 5000;
-var current_slide = 1;
-
-//var $slider = $('#slider');
-var $slide_container = $('.promotions');
-var $slides = $('.promotions li');
-
-var interval;
-
-$slides.each(function(index)
-{ $(this).css('left',(index*100)+'%'); }
-
-);
-
-function startSlider() {
-interval = setInterval(function() {
-$slide_container.animate(
-{'left': '-='+(width+'%')}
-
-, animation_speed, function() {
-if (++current_slide === $slides.length)
-{ current_slide = 1; $slide_container.css('left', 0); }
-
-});
-}, time_val);
-}
-
-startSlider();
-}
-
-</script>

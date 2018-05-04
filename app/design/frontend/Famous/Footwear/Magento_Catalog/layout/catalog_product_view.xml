@@ -13,7 +13,7 @@ and open the template in the editor.
         <referenceBlock name="product.info.mailto" remove="true" />
         <referenceContainer name="product.info.social">
 	        <referenceBlock name="product.info.addto">
-	        	<block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/sizeguide.phtml" before="view.addto.wishlist" />
+                <block class="Magento\Catalog\Block\Product\View" template="Magento_Catalog::product/view/sizeguide.phtml" after="product.info.overview" />
 	        </referenceBlock>	
 	    </referenceContainer>
 	    <referenceContainer name="product.info.main">
@@ -24,22 +24,35 @@ and open the template in the editor.
                         <argument name="at_call" xsi:type="string">getShortDescription</argument>
                         <argument name="at_code" xsi:type="string">short_description</argument>
                         <argument name="css_class" xsi:type="string">overview</argument>
-                        <argument name="at_label" xsi:type="string">Description</argument>
-                        <argument name="title" translate="true" xsi:type="string">Overview</argument>
+                        <argument name="at_label" xsi:type="string">Product Info</argument>
+                        <argument name="title" translate="true" xsi:type="string">Product Info</argument>
                         
                     </arguments>
                 </block>
                 <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.overview11" template="Magento_Catalog::product/view/customattribute.phtml" group="detailed_info" after="product.info.extrahint">
                     <arguments>
-                        <argument name="at_call" xsi:type="string">getShortDescription</argument>
+                        <argument name="at_call" xsi:type="string">getDescription</argument>
                         <argument name="at_code" xsi:type="string">description</argument>
                         <argument name="css_class" xsi:type="string">overview</argument>
-                        <argument name="at_label" xsi:type="string">Short Description</argument>
-                        <argument name="title" translate="true" xsi:type="string">Overview</argument>
+                        <argument name="at_label" xsi:type="string">Description</argument>
+                        <argument name="title" translate="true" xsi:type="string">Description</argument>
                         
                     </arguments>
                 </block>
-            </container>    
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.overview2" template="Magento_Catalog::product/view/customattribute.phtml" group="detailed_info" after="product.info.extrahint">
+                    <arguments>
+                        <argument name="at_call" xsi:type="string">getShippingReturns</argument>
+                        <argument name="at_code" xsi:type="string">shipping_returns</argument>
+                        <argument name="css_class" xsi:type="string">overview</argument>
+                        <argument name="at_label" xsi:type="string">Shipping &amp; Returns</argument>
+                        <argument name="title" translate="true" xsi:type="string">Shipping &amp; Returns</argument>
+                        
+                    </arguments>
+                </block>
+            </container> 
+             <container name="socialsharing" label="socialsharing" htmlTag="div" htmlClass="socialsharing" htmlId="socialsharing">
+                <block class="Magento\Catalog\Block\Product\View" template="Magento_Catalog::product/view/socialsharing.phtml" after="product.info.overview" />
+            </container>
 	    </referenceContainer>
 	</body>
 </page>
