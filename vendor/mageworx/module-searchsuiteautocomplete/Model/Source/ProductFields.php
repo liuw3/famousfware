@@ -25,6 +25,9 @@ class ProductFields
     const ADD_TO_CART = 'add_to_cart';
 
     const URL = 'url';
+    const BRAND = 'manufacturer';
+    const COLOR = 'color';
+    const STYLE = 'style';
 
     /**
      *
@@ -41,6 +44,9 @@ class ProductFields
             ['value' => self::DESCRIPTION, 'label' => __('Description')],
             ['value' => self::PRICE, 'label' => __('Price')],
             ['value' => self::ADD_TO_CART, 'label' => __('Add to Cart Button')],
+            ['value' => self::BRAND, 'label' => __('Brand')],
+            ['value' => self::COLOR, 'label' => __('Colour')],
+            ['value' => self::STYLE, 'label' => __('Style')],
         ];
    
         return $this->options;
