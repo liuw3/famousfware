@@ -65,9 +65,9 @@ return array(
     '108fd301b720a30c9ec42a785ee00656' => $vendorDir . '/magento/module-gift-message/registration.php',
     '3ce6447b6ef8a0e6e2a3cec20fba30e3' => $vendorDir . '/magento/module-instant-purchase/registration.php',
     '2d0debaab8ec34dfba214036a43af24e' => $vendorDir . '/magento/module-url-rewrite/registration.php',
+    '157e241791c95df2d41c00e4314f115e' => $vendorDir . '/magento/module-search/registration.php',
     'b2a251005c112dee4a8e7f7580a475f5' => $vendorDir . '/magento/module-cookie/registration.php',
     'cf44f9b1253939f955772534aabbf624' => $vendorDir . '/magento/module-grouped-product/registration.php',
-    '157e241791c95df2d41c00e4314f115e' => $vendorDir . '/magento/module-search/registration.php',
     '056cd8d2398ceabe9e3cff88f4cf877b' => $vendorDir . '/magento/theme-frontend-blank/registration.php',
     '73a8e4290482dda77755fd5545cb64f4' => $vendorDir . '/magento/module-webapi/registration.php',
     'e42c867a02490ee966c620d4af2bd81f' => $vendorDir . '/magento/module-robots/registration.php',
@@ -147,5 +147,6 @@ return array(
     '1158fd4355efa1508f87cf82bdcd70ac' => $vendorDir . '/magento/module-admin-notification/registration.php',
     'ecb8e9b41f51c277a87468608b694cd4' => $vendorDir . '/magento/module-marketplace/registration.php',
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+    '93c4c99a884771971b865b2740fbb829' => $vendorDir . '/mageworx/module-searchsuiteautocomplete/registration.php',
     'b4cf39431a4b949eea8aa69ebb3d39da' => $baseDir . '/app/etc/NonComposerComponentRegistration.php',
 );
