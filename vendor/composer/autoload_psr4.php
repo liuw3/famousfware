@@ -196,6 +196,7 @@ return array(
     'Magento\\AdvancedPricingImportExport\\' => array($vendorDir . '/magento/module-advanced-pricing-import-export'),
     'Magento\\AdminNotification\\' => array($vendorDir . '/magento/module-admin-notification'),
     'Magento\\' => array($baseDir . '/app/code/Magento'),
+    'MageWorx\\SearchSuiteAutocomplete\\' => array($vendorDir . '/mageworx/module-searchsuiteautocomplete'),
     'League\\CLImate\\' => array($vendorDir . '/league/climate/src'),
     'JsonSchema\\' => array($vendorDir . '/justinrainbow/json-schema/src/JsonSchema'),
     'Interop\\Container\\' => array($vendorDir . '/container-interop/container-interop/src/Interop/Container'),
