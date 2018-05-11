@@ -338,6 +338,16 @@ a, .alink {
         width: 66px;
         height: 63px;
     }
+
+    .swatch-attribute-options {
+        display: inline-block;
+    }
+
+    .swatch-attribute-label {
+        display: inline-block;
+        padding-bottom: 50px;
+        vertical-align: middle;
+    }
    /*****SINGLE PRODUCT PAGE CSS ENDS HERE********/
 }
 
