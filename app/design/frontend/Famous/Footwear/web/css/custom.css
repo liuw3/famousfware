@@ -168,13 +168,15 @@ a, .alink {
         text-align: center;
         magrin:0px auto;
     }
+    li.flex-active-slide a {
+        /* border: 1px solid red; */
+        position: absolute;
+        left: 30%;
+        top: 40%;
+    }
     .flex-viewport .slides li h2 {
         margin-bottom: 0px !important;
         height: 200px;
-        position: absolute;
-        top: 30%;
-        left: 30%;
-        z-index: 9999999999;
         font-weight: 800;
         color: #fff;
         font-size: 44px;
@@ -187,11 +189,8 @@ a, .alink {
         border-radius: 0px;
         color: #fff;
         font-size: 21px;
-        position: absolute;
-        top: 45%;
-        left: 30%;
-        z-index: 9999999999;
         font-weight: 800;
+        width:200px;
     }
     /**.slider-btn{
         background: none;
