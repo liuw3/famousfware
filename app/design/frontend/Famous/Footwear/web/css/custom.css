@@ -322,6 +322,22 @@ a, .alink {
         font-weight: 400;
         width: 100%;
     }
+
+    .swatch-attribute.size .swatch-option, .swatch-attribute.manufacturer .swatch-option {
+        background: #eff0e9;
+        color: #000;
+        width: 34px;
+        height: 18px;
+        border-radius: 50%;
+        vertical-align: middle;
+        padding: 16px 8px;
+    }
+
+    .swatch-attribute .image {
+        border: 1px solid #ccc;
+        width: 66px;
+        height: 63px;
+    }
    /*****SINGLE PRODUCT PAGE CSS ENDS HERE********/
 }
 
