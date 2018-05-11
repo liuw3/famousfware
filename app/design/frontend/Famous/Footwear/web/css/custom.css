@@ -126,10 +126,7 @@ a, .alink {
         margin: 0 0px 0 0;
     }
     /** Section: Promotions **/
-    .promotions-slider-sm {
-        /** hide promotions slider for mobile at desktop ***/
-        display:none; 
-    }
+    
     .promotions li {
         width: 32%;
         display: inline-block;
@@ -162,14 +159,15 @@ a, .alink {
     .magestore-bannerslider-title {
         display: none;
     }
-    /**.slider-heading {
-        position: absolute;
-        top: 8%;
+    main#maincontent {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+    .flex-viewport .slides li {
         text-align: center;
-        left: 33%;
-        color: #fff;
-        font-size: 81px;
-    }**/
+        magrin:0px auto;
+    }
     .flex-viewport .slides li h2 {
         margin-bottom: 0px !important;
         height: 200px;
@@ -179,7 +177,7 @@ a, .alink {
         z-index: 9999999999;
         font-weight: 800;
         color: #fff;
-        font-size: 81px;
+        font-size: 44px;
     }
 
     .flexslider .slides > li p {
@@ -405,6 +403,10 @@ li.social img {
 }
 .copyright-left{
     text-align: left; float: left;
+}
+.footer .copyright, .footer .bugs {
+    display: none;
+    margin: 0px;
 }
 @media (max-width: 768px){
     /** media queries for mobile **/
