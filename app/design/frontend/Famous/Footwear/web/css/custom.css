@@ -366,6 +366,19 @@ a, .alink {
         margin-bottom: 15px;
     }
 
+    .field-error, div.mage-error[generated] {
+        margin-top: 3px;
+        position: absolute;
+        top: 0px;
+        text-align: center;
+        left:15%;
+    }
+
+    .swatch-attribute.size {
+        position: relative;
+        text-align: left;
+    }
+
     .abs-action-addto-product, .block-event .slider-panel .slider .item .action.event, .bundle-options-container .block-bundle-summary .product-addto-links > .action, .product-info-main .action.tocompare, .product-options-bottom .action.tocompare, .product-info-main .action.towishlist, .product-options-bottom .action.towishlist, .block-bundle-summary .action.towishlist {
         background-image: none;
         background: none;
