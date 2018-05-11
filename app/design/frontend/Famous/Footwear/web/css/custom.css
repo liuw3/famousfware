@@ -309,6 +309,15 @@ a, .alink {
     .breadcrumbs {
         margin-top: 25px;
     }
+
+    .product-info-main {
+        text-align: center;
+    }
+
+    div#vertical_tabs {
+        text-align: left;
+    }
+
     .product-info-main .box-tocart .actions, .product-options-bottom .box-tocart .actions {
         display: block;
         width: 100%;
@@ -340,13 +349,28 @@ a, .alink {
     }
 
     .swatch-attribute-options {
-        display: inline-block;
+       /** display: inline-block;**/
+        text-align: center!important;
+        margin: 0px auto!important;
+        padding: 20px;
     }
 
     .swatch-attribute-label {
-        display: inline-block;
+       /** display: inline-block; **/
         padding-bottom: 50px;
         vertical-align: middle;
+    }
+
+    .swatch-attribute.color {
+        border-bottom: 2px solid #b8b8b8;
+        margin-bottom: 15px;
+    }
+
+    .abs-action-addto-product, .block-event .slider-panel .slider .item .action.event, .bundle-options-container .block-bundle-summary .product-addto-links > .action, .product-info-main .action.tocompare, .product-options-bottom .action.tocompare, .product-info-main .action.towishlist, .product-options-bottom .action.towishlist, .block-bundle-summary .action.towishlist {
+        background-image: none;
+        background: none;
+        border: 0px solid #cdcdcd;
+        font-weight:300;
     }
    /*****SINGLE PRODUCT PAGE CSS ENDS HERE********/
 }
