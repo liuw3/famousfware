@@ -161,8 +161,6 @@ a, .alink {
         display: none;
     }
     main#maincontent {
-        padding-left: 0px;
-        padding-right: 0px;
         width: 100%;
     }
     .flex-viewport .slides li {
