@@ -26,6 +26,7 @@ h3 {
 body {
     color: #363436;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden!important;
 }
 
 a:visited, .alink:visited {
@@ -101,6 +102,9 @@ a, .alink {
         background-color: #fff;
     }
     /** Section: Navigation **/
+    .nav-sections {
+        background: none;
+    }
     .navigation {
         background: #fff;
         font-weight: 400;
@@ -123,10 +127,7 @@ a, .alink {
         margin: 0 0px 0 0;
     }
     /** Section: Promotions **/
-    .promotions-slider-sm {
-        /** hide promotions slider for mobile at desktop ***/
-        display:none; 
-    }
+    
     .promotions li {
         width: 32%;
         display: inline-block;
@@ -156,15 +157,43 @@ a, .alink {
         /** hide mobile slider at desktop ***/
         display: none;
     }
-    .slider-heading {
-        position: absolute;
-        top: 8%;
-        text-align: center;
-        left: 33%;
-        color: #fff;
-        font-size: 81px;
+    .magestore-bannerslider-title {
+        display: none;
     }
-    .slider-btn{
+    main#maincontent {
+        width: 100%;
+    }
+    .flex-viewport .slides li {
+        text-align: center;
+        magrin:0px auto;
+    }
+    li.flex-active-slide a {
+        /* border: 1px solid red; */
+        position: absolute;
+        left: 40%;
+        top: 40%;
+        text-decoration: none;
+    }
+    .flex-viewport .slides li h2 {
+        margin-bottom: 0px !important;
+        font-weight: 800;
+        color: #fff;
+        font-size: 44px;
+        margin-bottom:30px;
+    }
+
+    .flexslider .slides > li p {
+        margin-bottom: 0px !important;
+        border-right: 2px solid #fff;
+        border-left: 2px solid #fff;
+        border-radius: 0px;
+        color: #fff;
+        font-size: 21px;
+        font-weight: 800;
+        width:200px;
+        margin:0px auto;
+    }
+    /**.slider-btn{
         background: none;
         border: 0px;
         outline: none!important;
@@ -174,7 +203,7 @@ a, .alink {
         border-radius: 0px;
         color: #fff;
         font-size: 21px;
-    }
+    }**/
 
     /** Section: Top 4 Featured products Home Page **/
     .content-wrapper-home {
@@ -275,7 +304,88 @@ a, .alink {
         display: inline-block;
         padding-left: 16px;
     }
-   
+
+    /*********SINGLE PRODUCT PAGE CSS**************/
+    .breadcrumbs {
+        margin-top: 25px;
+    }
+
+    .product-info-main {
+        text-align: center;
+    }
+
+    div#vertical_tabs {
+        text-align: left;
+    }
+
+    .product-info-main .box-tocart .actions, .product-options-bottom .box-tocart .actions {
+        display: block;
+        width: 100%;
+    }
+    .product-info-main .box-tocart, .product-options-bottom .box-tocart {
+        display: block!important;
+    }
+    button#product-addtocart-button {
+        background: #000;
+        color: #fff;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    .swatch-attribute.size .swatch-option, .swatch-attribute.manufacturer .swatch-option {
+        background: #eff0e9;
+        color: #000;
+        width: 34px;
+        height: 18px;
+        border-radius: 50%;
+        vertical-align: middle;
+        padding: 16px 8px;
+    }
+
+    .swatch-attribute .image {
+        border: 1px solid #ccc;
+        width: 66px;
+        height: 63px;
+    }
+
+    .swatch-attribute-options {
+       /** display: inline-block;**/
+        text-align: center!important;
+        margin: 0px auto!important;
+        padding: 20px;
+    }
+
+    .swatch-attribute-label {
+       /** display: inline-block; **/
+        padding-bottom: 50px;
+        vertical-align: middle;
+    }
+
+    .swatch-attribute.color {
+        border-bottom: 2px solid #b8b8b8;
+        margin-bottom: 15px;
+    }
+
+    .field-error, div.mage-error[generated] {
+        margin-top: 3px;
+        position: absolute;
+        top: 0px;
+        text-align: center;
+        left:15%;
+    }
+
+    .swatch-attribute.size {
+        position: relative;
+        text-align: left;
+    }
+
+    .abs-action-addto-product, .block-event .slider-panel .slider .item .action.event, .bundle-options-container .block-bundle-summary .product-addto-links > .action, .product-info-main .action.tocompare, .product-options-bottom .action.tocompare, .product-info-main .action.towishlist, .product-options-bottom .action.towishlist, .block-bundle-summary .action.towishlist {
+        background-image: none;
+        background: none;
+        border: 0px solid #cdcdcd;
+        font-weight:300;
+    }
+   /*****SINGLE PRODUCT PAGE CSS ENDS HERE********/
 }
 
 
@@ -292,7 +402,10 @@ button.action.more {
     border-radius: 0px;
     font-weight: 300;
     margin-bottom: 30px;
-    width: 180px;
+    width: 210px;
+}
+a.action.towishlist {
+    float: left;
 }
 .product-item-details img{
     width:4%;
@@ -340,6 +453,7 @@ li.nav.item {
     color: #fff;
     font-weight: 300;
     font-size: 11px;
+    width:100px;
 }
 .block.newsletter input {
     border: none;
@@ -372,68 +486,33 @@ li.social img {
 .copyright-left{
     text-align: left; float: left;
 }
+.footer .copyright, .footer .bugs {
+    display: none;
+    margin: 0px;
+}
 @media (max-width: 768px){
     /** media queries for mobile **/
 
     /*** promotions text slider mobile ***/
+    
     .promotions {
-        /** hide promotions for desktop at mobile ***/
-        display: none;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      background: #363436;
     }
-
-    .promotions-slider-sm {
-        background: #000;
-        color: #fff;
-        /* border: 1px solid red; */
-        padding: 16px 10px;
-        margin-top: 0px;
-        /* padding-top: 0px; */
+    .promotions li {
+      position: absolute;
+      list-style-type: none;
+      text-align: center;
+      width: 100%;
+      height: 30px;
+      top: 0; left:0px;
+      color: #fff;
+      background: #363436;
+      margin:0px auto;
     }
-
-    .item-1, 
-    .item-2, 
-    .item-3 {
-        position: absolute;
-        display: block;
-        top: 8em;
-
-        width: 100%;
-
-        animation-duration: 20s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
-
-    .item-1{
-        animation-name: anim-1;
-    }
-
-    .item-2{
-        animation-name: anim-2;
-    }
-
-    .item-3{
-        animation-name: anim-3;
-    }
-
-    @keyframes anim-1 {
-        0%, 8.3% { left: -100%; opacity: 0; }
-      8.3%,25% { left: 25%; opacity: 1; }
-      33.33%, 100% { left: 110%; opacity: 0; }
-    }
-
-    @keyframes anim-2 {
-        0%, 33.33% { left: -100%; opacity: 0; }
-      41.63%, 58.29% { left: 25%; opacity: 1; }
-      66.66%, 100% { left: 110%; opacity: 0; }
-    }
-
-    @keyframes anim-3 {
-        0%, 66.66% { left: -100%; opacity: 0; }
-      74.96%, 91.62% { left: 25%; opacity: 1; }
-      100% { left: 110%; opacity: 0; }
-    }
-
+    
     /** promotions text slider mobile ends here ***/
 
     /*** Mobile Slider CSS ***/
