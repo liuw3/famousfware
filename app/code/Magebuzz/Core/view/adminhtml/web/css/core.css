@@ -8,16 +8,16 @@
     vertical-align: text-bottom;
 }
 
-	fieldset#magebuzz_info_information h3 {
-		color: #eb5202;
-		margin-bottom: 10px;
-	}
+fieldset#magebuzz_info_information h3 {
+    color: #eb5202;
+    margin-bottom: 10px;
+}
 
-	fieldset#magebuzz_info_installed_extensions td.label label {
-		padding-bottom: 7px;
-	}
+fieldset#magebuzz_info_installed_extensions td.label label {
+    padding-bottom: 7px;
+}
 
-	.magebuzz-follow ul li {
-		float: left;
-		list-style: none;
-	}
+.magebuzz-follow ul li {
+    float: left;
+    list-style: none;
+}
