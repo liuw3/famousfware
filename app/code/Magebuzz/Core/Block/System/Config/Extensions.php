@@ -36,7 +36,8 @@ class Extensions extends \Magento\Config\Block\System\Config\Form\Fieldset
         \Magento\Framework\Module\ModuleListInterface $moduleList,
         \Magento\Framework\Module\ModuleResource $moduleResource,
         array $data = []
-    ) {
+    )
+    {
         parent::__construct($context, $authSession, $jsHelper, $data);
         $this->_moduleList = $moduleList;
         $this->moduleResource = $moduleResource;
@@ -59,9 +60,9 @@ class Extensions extends \Magento\Config\Block\System\Config\Form\Fieldset
         sort($modules);
 
         foreach ($modules as $moduleName) {
-        	if (strstr($moduleName, 'Magebuzz_') === false) {
-				continue;
-			}
+            if (strstr($moduleName, 'Magebuzz_') === false) {
+                continue;
+            }
             if ($moduleName === 'Magebuzz_Core') {
                 continue;
             }
@@ -72,32 +73,32 @@ class Extensions extends \Magento\Config\Block\System\Config\Form\Fieldset
         return $html;
     }
 
-	protected function _getFieldHtml($fieldset, $moduleCode)
-	{
-		$currentVer = $this->moduleResource->getDataVersion($moduleCode);
+    protected function _getFieldHtml($fieldset, $moduleCode)
+    {
+        $currentVer = $this->moduleResource->getDataVersion($moduleCode);
 
-		if (!$currentVer) {
-			return '';
-		}
+        if (!$currentVer) {
+            return '';
+        }
 
-		$moduleName = substr($moduleCode, strpos($moduleCode, '_') + 1);
+        $moduleName = substr($moduleCode, strpos($moduleCode, '_') + 1);
 
-		$status = '<a  target="_blank"><img src="'.$this->getViewFileUrl('Magebuzz_Core::images/ok.gif').'" title="'.__("Installed").'"/></a>';
+        $status = '<a  target="_blank"><img src="' . $this->getViewFileUrl('Magebuzz_Core::images/ok.gif') . '" title="' . __("Installed") . '"/></a>';
 
-		$moduleName = '<span class="extension-name">' . $moduleName . '</span>';
+        $moduleName = '<span class="extension-name">' . $moduleName . '</span>';
 
-		$moduleName = $status . ' ' . $moduleName;
+        $moduleName = $status . ' ' . $moduleName;
 
-		$field = $fieldset->addField($moduleCode, 'label', array(
-				'name'  => 'dummy',
-				'label' => $moduleName,
-				'value' => $currentVer,
-		))->setRenderer($this->_getFieldRenderer());
+        $field = $fieldset->addField($moduleCode, 'label', array(
+            'name' => 'dummy',
+            'label' => $moduleName,
+            'value' => $currentVer,
+        ))->setRenderer($this->_getFieldRenderer());
 
-		return $field->toHtml();
-	}
+        return $field->toHtml();
+    }
 
-	/**
+    /**
      * @return \Magento\Config\Block\System\Config\Form\Field
      */
     protected function _getFieldRenderer()

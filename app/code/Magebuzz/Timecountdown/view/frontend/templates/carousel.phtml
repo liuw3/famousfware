@@ -1,0 +1,23 @@
+<?php
+$productCollection = $block->getProductCollection();
+
+if (count($productCollection) > 0) {
+    $isDisplayInOne = $block->getScopeConfig('timecountdown/general/display_in_one');
+    ?>
+   
+    <div class="magebuzz-timecountdown-slider">
+        <?php
+        if ($isDisplayInOne && $block->isPriceCountdownInOne()) {
+            $style = $block->getStyle();
+            $toDate = strtotime($block->getScopeConfig('timecountdown/general/todate'));
+            ?>
+            
+            <div class="mb-timecountdown-container timer-homepage-one timer-<?php echo $style; ?> "
+                 data-todate="<?php echo $toDate; ?>">
+                <div class="timer-heading"><?php echo __($block->getScopeConfig('timecountdown/general/clocktext')); ?></div>
+                <div class="timer-countbox"></div>
+            </div>
+        <?php } ?>
+        
+    </div>
+<?php } ?>

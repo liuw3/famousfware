@@ -23,7 +23,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.cms.page.content.top" before="-">
+            <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.cms.page.content.top" after="timecountdown.homepage.carousel">
             	<action method="setPosition">
             		<argument name="position" xsi:type="string">cms-page-content-top</argument>
             	</action>

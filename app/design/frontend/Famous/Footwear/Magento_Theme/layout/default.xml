@@ -37,59 +37,18 @@
         </referenceContainer>
 
         <referenceContainer name="header.panel">
-            <block class="Magento\Cms\Block\Block" name="cmslinksheader">
+            <block class="Magento\Cms\Block\Block" name="cmslinksheader" before="-">
                 <arguments>
                     <argument name="block_id" xsi:type="string">homepage-header-toplinks</argument>
                 </arguments>
             </block>
-            <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" as="minicart" after="logo" template="Magento_Checkout::cart/minicart.phtml">
-                <arguments>
-                    <argument name="jsLayout" xsi:type="array">
-                        <item name="types" xsi:type="array"/>
-                        <item name="components" xsi:type="array">
-                            <item name="minicart_content" xsi:type="array">
-                                <item name="component" xsi:type="string">Magento_Checkout/js/view/minicart</item>
-                                <item name="config" xsi:type="array">
-                                    <item name="template" xsi:type="string">Magento_Checkout/minicart/content</item>
-                                </item>
-                                <item name="children" xsi:type="array">
-                                    <item name="subtotal.container" xsi:type="array">
-                                        <item name="component" xsi:type="string">uiComponent</item>
-                                        <item name="config" xsi:type="array">
-                                            <item name="displayArea" xsi:type="string">subtotalContainer</item>
-                                        </item>
-                                        <item name="children" xsi:type="array">
-                                            <item name="subtotal" xsi:type="array">
-                                                <item name="component" xsi:type="string">uiComponent</item>
-                                                <item name="config" xsi:type="array">
-                                                    <item name="template" xsi:type="string">Magento_Checkout/minicart/subtotal</item>
-                                                </item>
-                                            </item>
-                                        </item>
-                                    </item>
-                                    <item name="extra_info" xsi:type="array">
-                                        <item name="component" xsi:type="string">uiComponent</item>
-                                        <item name="config" xsi:type="array">
-                                            <item name="displayArea" xsi:type="string">extraInfo</item>
-                                        </item>
-                                    </item>
-                                    <item name="promotion" xsi:type="array">
-                                        <item name="component" xsi:type="string">uiComponent</item>
-                                        <item name="config" xsi:type="array">
-                                            <item name="displayArea" xsi:type="string">promotion</item>
-                                        </item>
-                                    </item>
-                                </item>
-                            </item>
-                        </item>
-                    </argument>
-                </arguments>
-                <container name="minicart.addons" label="Mini-cart promotion block"/>
-            </block>
+            
         </referenceContainer>
         <referenceBlock name="top.links" remove="true" />
         <referenceBlock name="footer_links" remove="true" />
         <move element="copyright" destination="bugreport" />
+        <move element="minicart" destination="header.panel" after="cmslinksheader" />
+        
        
     </body>
 </page>
