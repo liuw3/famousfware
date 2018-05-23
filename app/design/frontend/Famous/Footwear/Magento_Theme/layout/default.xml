@@ -37,7 +37,7 @@
         </referenceContainer>
 
         <referenceContainer name="header.panel">
-            <block class="Magento\Cms\Block\Block" name="cmslinksheader" before="-">
+            <block class="Magento\Cms\Block\Block" name="cmslinksheader" before="minicart">
                 <arguments>
                     <argument name="block_id" xsi:type="string">homepage-header-toplinks</argument>
                 </arguments>
@@ -47,7 +47,7 @@
         <referenceBlock name="top.links" remove="true" />
         <referenceBlock name="footer_links" remove="true" />
         <move element="copyright" destination="bugreport" />
-        <move element="minicart" destination="header.panel" after="cmslinksheader" />
+        <move element="minicart" destination="header.panel" after="-" />
         
        
     </body>
