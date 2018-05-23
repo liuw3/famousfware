@@ -58,6 +58,7 @@ $_helpernew = $this->helper('FF\Homepage\Helper\Newlabel');
                     ?>
                     <?php // Product Image ?>
                     <a href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
+                    <?php echo $this->helper('Magebees\Productlabel\Helper\Data')->getLabel($_product); ?>
                         <?= $productImage->toHtml() ?>
                     </a>
                     <div class="product details product-item-details">

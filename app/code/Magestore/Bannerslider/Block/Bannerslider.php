@@ -53,6 +53,7 @@ class Bannerslider extends \Magento\Framework\View\Element\Template
      * @var \Magestore\Bannerslider\Model\ResourceModel\Slider\CollectionFactory
      */
     protected $_sliderCollectionFactory;
+    protected $scopeConfig;
 
     /**
      * [__construct description].
@@ -70,10 +71,12 @@ class Bannerslider extends \Magento\Framework\View\Element\Template
         \Magento\Framework\Registry $coreRegistry,
         \Magestore\Bannerslider\Model\ResourceModel\Slider\CollectionFactory $sliderCollectionFactory,
         \Magestore\Bannerslider\Model\ResourceModel\Banner\CollectionFactory $bannerCollectionFactory,
+        \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
         array $data = []
     ) {
         parent::__construct($context, $data);
         $this->_coreRegistry = $coreRegistry;
+        $this->scopeConfig = $scopeConfig;
         $this->_sliderCollectionFactory = $sliderCollectionFactory;
     }
 
@@ -189,5 +192,9 @@ class Bannerslider extends \Magento\Framework\View\Element\Template
         $this->appendChildBlockSliders($sliderCollection);
 
         return $this;
+    }
+    public function getConfigValue(){
+        $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORES;
+        return $this->scopeConfig->getValue("bannerslider/general/showvideo", $storeScope);
     }
 }
