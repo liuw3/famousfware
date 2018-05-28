@@ -33,12 +33,13 @@ class View extends \Magento\Framework\View\Element\Template
     protected $_cartHelper;
 
     protected $_brandFactory;
-
+    protected $productStatus;
 
 	public function __construct(
         \Magento\Catalog\Block\Product\Context $context,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory,
         \Magento\Catalog\Model\Product\Visibility $catalogProductVisibility,
+        \Magento\Catalog\Model\Product\Attribute\Source\Status $productStatus,
         \Magento\Framework\App\Http\Context $httpContext,
         \Emizentech\ShopByBrand\Model\BrandFactory $brandFactory,
         array $data = []
@@ -46,9 +47,11 @@ class View extends \Magento\Framework\View\Element\Template
         $this->_productCollectionFactory = $productCollectionFactory;
         $this->_catalogProductVisibility = $catalogProductVisibility;
         $this->httpContext = $httpContext;
+
         $this->_imageHelper = $context->getImageHelper();
         $this->_brandFactory = $brandFactory;
         $this->_cartHelper = $context->getCartHelper();
+        $this->productStatus = $productStatus;
         parent::__construct(
             $context,
             $data
@@ -114,6 +117,8 @@ class View extends \Magento\Framework\View\Element\Template
 //     	die;
 		$collection->addAttributeToSelect('name');
     	$collection->addStoreFilter()->addAttributeToFilter('manufacturer' , $brand->getAttributeId());
+        $collection->addAttributeToFilter('status', ['in' => $this->productStatus->getVisibleStatusIds()]);
+        $collection->setVisibility($this->_catalogProductVisibility->getVisibleInSiteIds());
 //     	var_dump(count($collection));
     	return $collection;
     }
