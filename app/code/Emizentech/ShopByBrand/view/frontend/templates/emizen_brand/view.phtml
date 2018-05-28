@@ -1,0 +1,92 @@
+<?php 
+$brand = $this->getBrand();
+$productCollection = $this->getCollection();
+$imagewidth = '200';
+$imageheight = '200';
+	$mode = 'grid';
+	$image = 'brand_products_content_widget_grid';
+$type = 'widget-new-grid';
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+$_helpernew = $this->helper('FF\Homepage\Helper\Newlabel');
+$templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::FULL_VIEW;
+ $showDescription = false;
+?>
+<h1><?php echo $brand->getName();?></h1>
+
+
+  <div class="block widget block-brand-products <?php /* @escapeNotVerified */
+	echo $mode; ?>">
+<div class="block-content">
+ <?php /* @escapeNotVerified */
+	echo '<!-- ' . $image . '-->' ?>
+ <div class="products-<?php /* @escapeNotVerified */
+	echo $mode; ?> <?php /* @escapeNotVerified */
+	echo $mode; ?>">
+                <ol class="product-items ">
+                    <?php
+	$iterator = 1; ?>
+    
+	<?php foreach ($productCollection as $_product): ?>
+                <?= /* @escapeNotVerified */ ($iterator++ == 1) ? '<li class="item product product-item">' : '</li><li class="item product product-item">' ?>
+                <div class="product-item-info" data-container="product-grid">
+                    <?php
+                    $productImage = $block->getImage($_product, $image);
+                   $image_url = $block->imageHelperObj()->init($_product, 'product_page_image_small')->setImageFile($_product->getFile())->resize($imagewidth, $imageheight)->getUrl();
+                    ?>
+                    <?php // Product Image ?>
+                    <a href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
+                    <?php echo $this->helper('Magebees\Productlabel\Helper\Data')->getLabel($_product); ?>
+                         <img src="<?php
+    echo $image_url; ?>" alt="<?php
+    echo $this->escapeHtml($_product->getName()) ?>" />
+                    </a>
+                    <div class="product details product-item-details">
+                        <?php
+                            $_productNameStripped = $block->stripTags($_product->getName(), null, true);
+                        ?>
+                         <div class="product actions product-item-actions">
+                               
+                                <div data-role="add-to-links" class="actions-secondary">
+                                    <?php if ($addToBlock = $block->getChildBlock('addto')): ?>
+                                        <?= $addToBlock->setProduct($_product)->getChildHtml() ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <strong class="product name product-item-name">
+                            <?= /* @escapeNotVerified */ $_product->getAttributeText('manufacturer'); ?><br />
+                            <a class="product-item-link"
+                               href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>">
+                                <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_product->getName(), 'name') ?>
+                            </a>
+                        </strong>
+                        <?php if($_helpernew->isProductNew($_product)): ?>
+                            <div class="new-lable">
+                                <?php echo __('New'); ?>
+                            </div>
+                        <?php endif; ?>
+                        <?= $block->getReviewsSummaryHtml($_product, $templateType) ?>
+                        <?= /* @escapeNotVerified */ $block->getProductPrice($_product) ?>
+                        <?= $block->getProductDetailsHtml($_product) ?>
+
+                        <div class="product-item-inner">
+                           
+                            <?php if ($showDescription):?>
+                                <div class="product description product-item-description">
+                                    <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
+                                    <a href="<?= /* @escapeNotVerified */ $_product->getProductUrl() ?>" title="<?= /* @escapeNotVerified */ $_productNameStripped ?>"
+                                       class="action more"><?= /* @escapeNotVerified */ __('Learn More') ?></a>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <?= ($iterator == count($productCollection)+1) ? '</li>' : '' ?>
+            <?php endforeach; ?>
+</div>
+ <div class="toolbar-bottom">
+         <div class="toolbar bottom">
+            <?php echo $block->getPagerHtml(); ?>
+         </div>
+      </div>
+</div>
+</div>
