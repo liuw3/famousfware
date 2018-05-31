@@ -126,6 +126,12 @@ a, .alink {
     .navigation .level0 {
         margin: 0 0px 0 0;
     }
+    
+    nav ul li:active a {
+        color: #EB2227 !important;
+        border: none !important;
+    }
+    
     /** Section: Promotions **/
     
     .promotions li {
@@ -569,9 +575,7 @@ li.social img {
         width: 100%;
     }
 
-    nav.navigation {
-        display: none;
-    }
+   
 
 
     .insta {
