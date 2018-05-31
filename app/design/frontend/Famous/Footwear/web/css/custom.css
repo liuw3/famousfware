@@ -235,6 +235,11 @@ a, .alink {
     }**/
 
     /** Section: Top 4 Featured products Home Page **/
+
+    .block-promo .title {
+        font-weight: 900;
+        font-size: 4rem;   
+    }
     .content-wrapper-home {
         padding-top: 2.5rem;
         width: 100%;
@@ -418,6 +423,29 @@ a, .alink {
     .swatch-attribute.color {
         text-align: left;
     }
+
+    div#vertical_tabs h3 {
+        border-bottom: 2px solid #a7a9ac;
+        padding-bottom: 9px;
+        color: #363436;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    a.action.towishlist {
+        float: right;
+    }
+
+    .product-addto-links {
+        text-align: center;
+        width: 45%;
+        margin: 0px auto!important;
+    }
+
+    a.action.towishlist span {
+        font-size: 14px;
+        font-weight: 400;
+    }
    /*****SINGLE PRODUCT PAGE CSS ENDS HERE********/
 }
 
@@ -433,10 +461,15 @@ button.action.more {
     border: 2px solid #000;
     padding: 20px 20px;
     border-radius: 0px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 30px;
     width: 210px;
 }
+
+.product-item .price-box .price {
+        font-weight: 400;
+}
+
 a.action.towishlist {
     float: left;
 }
@@ -445,6 +478,31 @@ a.action.towishlist {
     vertical-align: middle;
 }
 
+.instadiv h3 {
+    color: #363436;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.instadiv {
+    margin-top: 5em;
+}
+
+ul.promotional-blocks p {
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+ul.promotional-blocks {
+    margin-top: 5em;
+}
+
+ul.promotional-blocks h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
 /*** Footer CSS ***/
 .page-footer{
     background: #f5f5f5;
