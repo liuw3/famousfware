@@ -82,6 +82,13 @@ a, .alink {
         width: 70%;
         margin-top: 12px;
     }
+    
+    .minicart-wrapper {
+        float: right;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+    }
 
     input#search {
         outline: none;
