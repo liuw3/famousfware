@@ -67,7 +67,11 @@ a, .alink {
     }
 
     ul.header.links li img {
-        width: 70%;
+        width: 60%;
+    }
+    
+    li.authorization-link a {
+        padding-right: 10px;
     }
 
     ul.header.links {
@@ -86,13 +90,14 @@ a, .alink {
     .minicart-wrapper {
         float: right;
         position: absolute;
-        right: 45px;
-        top: 17px;
+        right: 30px;
+        top: 19px;
     }
     
     .minicart-wrapper .action.showcart {
 
-        content: url('http://ffdev.predikkta.com/pub/media/wysiwyg/Bag_Icons.png');
+        content: url('http://ffdev.predikkta.com/pub/media/wysiwyg/Bag-Icons.png');
+        width: 65%;
     }
 
     input#search {
@@ -100,9 +105,10 @@ a, .alink {
         border: none;
         border-bottom: 1px solid #59595c;    
         width: 100%;
-        background:url('http://ffdev.predikkta.com/pub/media/wysiwyg/Search_Icons.png');
+        background:url('http://ffdev.predikkta.com/pub/media/wysiwyg/SearchIcons.png');
         background-repeat:no-repeat;
         background-position:right;
+        background-size: 9%;
     }
 
     .block-search .action.search:before {
@@ -142,7 +148,7 @@ a, .alink {
         margin: 0 0px 0 0;
     }
     
-    nav ul li:active a {
+    nav ul li.active a {
         color: #EB2227 !important;
         border: none !important;
     }
@@ -349,7 +355,7 @@ a, .alink {
         display: block!important;
     }
     button#product-addtocart-button {
-        background: #000;
+        background: #363436;
         color: #fff;
         font-weight: 400;
         width: 100%;
@@ -407,6 +413,10 @@ a, .alink {
         background: none;
         border: 0px solid #cdcdcd;
         font-weight:300;
+    }
+
+    .swatch-attribute.color {
+        text-align: left;
     }
    /*****SINGLE PRODUCT PAGE CSS ENDS HERE********/
 }
