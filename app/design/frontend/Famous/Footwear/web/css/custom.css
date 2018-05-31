@@ -86,15 +86,23 @@ a, .alink {
     .minicart-wrapper {
         float: right;
         position: absolute;
-        right: 10px;
-        top: 12px;
+        right: 18px;
+        top: 17px;
+    }
+    
+    .minicart-wrapper .action.showcart {
+
+    	content: url('http://ffdev.predikkta.com/pub/media/wysiwyg/Bag_Icons.png');
     }
 
     input#search {
         outline: none;
         border: none;
         border-bottom: 1px solid #59595c;    
-        width: 85%;
+        width: 100%;
+        background:url('http://ffdev.predikkta.com/pub/media/wysiwyg/Search_Icons.png');
+        background-repeat:no-repeat;
+        background-position:right;
     }
 
     .block-search .action.search:before {
