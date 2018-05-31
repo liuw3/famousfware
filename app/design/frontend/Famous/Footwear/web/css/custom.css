@@ -52,7 +52,7 @@ a, .alink {
         padding-right: 40px;
     }
     .header.panel > .header.links{
-        margin-right: 10px;
+        margin-right: 35px;
     }
     .page-header .header.panel{
         padding-bottom: 0px;
@@ -86,13 +86,13 @@ a, .alink {
     .minicart-wrapper {
         float: right;
         position: absolute;
-        right: 18px;
+        right: 45px;
         top: 17px;
     }
     
     .minicart-wrapper .action.showcart {
 
-    	content: url('http://ffdev.predikkta.com/pub/media/wysiwyg/Bag_Icons.png');
+        content: url('http://ffdev.predikkta.com/pub/media/wysiwyg/Bag_Icons.png');
     }
 
     input#search {
@@ -172,7 +172,9 @@ a, .alink {
         padding-top: 0px;
     }
 
-    
+    .magebuzz-timecountdown-slider {
+        display: none;
+    }
     /** Section: Slider ***/
     .slider-sm {
         /** hide mobile slider at desktop ***/
