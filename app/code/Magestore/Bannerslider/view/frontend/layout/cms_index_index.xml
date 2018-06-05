@@ -22,23 +22,34 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="content">
-            <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.cms.page.content.top" after="timecountdown.homepage.carousel" ifconfig="bannerslider/general/showbanner">
-            	<action method="setPosition">
-            		<argument name="position" xsi:type="string">cms-page-content-top</argument>
-            	</action>
-            </block>
-            <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.popup.on.homepage">
-                <action method="setPopupOnHomePage" />
-            </block>
-            <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.cms.page.content.top1" after="timecountdown.homepage.carousel" ifconfig="bannerslider/general/showvideo">
-                <action method="setPosition">
-                    <argument name="position" xsi:type="string">cms-page-content-top</argument>
-                </action>
-                <arguments>
-                    <argument name="template" xsi:type="string">Magestore_Bannerslider::video.phtml</argument>
-                </arguments>
-            </block>
+         <referenceContainer name="page.wrapper">
+            <container name="cmsblockafternaivgation" after="header.container" htmlTag="div" htmlClass="section-item-content" before="main.content">
+                
+                    <block class="Magento\Cms\Block\Block" name="cmslinks1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">header-header-offer-block</argument>
+                        </arguments>
+                    </block>
+                
+            </container>
+            <container name="bannervideo" after="cmsblockafternaivgation">
+                <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.cms.page.content.top" after="timecountdown.homepage.carousel" ifconfig="bannerslider/general/showbanner">
+                    <action method="setPosition">
+                        <argument name="position" xsi:type="string">cms-page-content-top</argument>
+                    </action>
+                </block>
+                <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.popup.on.homepage">
+                    <action method="setPopupOnHomePage" />
+                </block>
+                <block class="Magestore\Bannerslider\Block\Bannerslider" name="bannerslider.cms.page.content.top1" after="timecountdown.homepage.carousel" ifconfig="bannerslider/general/showvideo">
+                    <action method="setPosition">
+                        <argument name="position" xsi:type="string">cms-page-content-top</argument>
+                    </action>
+                    <arguments>
+                        <argument name="template" xsi:type="string">Magestore_Bannerslider::video.phtml</argument>
+                    </arguments>
+                </block>
+            </container>
         </referenceContainer>
     </body>
 </page>

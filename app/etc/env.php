@@ -16,9 +16,9 @@ return array (
       'default' => 
       array (
         'host' => 'localhost',
-        'dbname' => 'famousfware',
-        'username' => 'root',
-        'password' => 'root',
+        'dbname' => 'ffdevpre_famousfware',
+        'username' => 'ffdevpre_ffdev1',
+        'password' => 'Pr}{y%0X=n1Y',
         'active' => '1',
       ),
     ),

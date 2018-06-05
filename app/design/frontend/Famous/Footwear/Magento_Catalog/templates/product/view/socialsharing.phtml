@@ -6,17 +6,17 @@ $_product = $block->getProduct(); // GET THE PRODUCT
 <label>Share this Item
 <!-- FACEBOOK -->
 <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($_product->getProductUrl());?>&t=<?php echo urlencode($_product->getName())?>" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on FaceBook">
-<img src="<?php echo $this->getViewFileUrl('images/fb-med.png'); ?>" alt="FaceBook" width="5%">
+<img src="<?php echo $this->getViewFileUrl('images/Facebook.png'); ?>" alt="FaceBook" width="5%">
 </a>
 
 <!-- TWITTER -->
 <a href="http://twitter.com/home/?status=<?php echo urlencode($_product->getProductUrl());?>(<?php echo urlencode($_product->getName())?>)" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on Twitter">
-<img src="<?php echo $this->getViewFileUrl('images/tw.png'); ?>" alt="Twitter" width="5%">
+<img src="<?php echo $this->getViewFileUrl('images/Twitter.png'); ?>" alt="Twitter" width="5%">
 </a>
 
 <!-- Pininterest -->
 <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($_product->getProductUrl());?>&description=<?php echo $_product->getName(); ?>"(<?php echo urlencode($_product->getName())?>)" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on Twitter">
-<img src="<?php echo $this->getViewFileUrl('images/pi.png'); ?>" alt="Pininterest" width="5%">
+<img src="<?php echo $this->getViewFileUrl('images/Pinterest.png'); ?>" alt="Pininterest" width="5%">
 </a>
 
  

@@ -10,6 +10,6 @@
         <referenceContainer name="sidebar.additional">
             <block class="Emizentech\ShopByBrand\Block\Sidebar" name="brand_sidebar" as="brandsidebar" template="Emizentech_ShopByBrand::emizen_brand/sidebar.phtml"/>
         </referenceContainer>
-	 	
+	 
     </body>
 </page>

@@ -16,7 +16,7 @@
 <!--        <referenceContainer name="head.additional">
             <block class="Magento\Framework\View\Element\Template" name="custom.heads" template="custom_head.phtml" />
         </referenceContainer>-->
-        <referenceContainer name="content">
+        <referenceContainer name="bannervideo">
             <block class="Magebuzz\Timecountdown\Block\Carousel" name="timecountdown.homepage.carousel" 
                    template="carousel.phtml" ifconfig="timecountdown/general/show_in_homepage" before="-" cacheable="false"/>
         </referenceContainer>

@@ -21,6 +21,7 @@
                     </block>
                 
             </container>
+           
         </referenceContainer>
          <referenceContainer name="page.wrapper">
             <container name="bugreport" after="footer-container" />
@@ -48,7 +49,7 @@
         <referenceBlock name="footer_links" remove="true" />
         <move element="copyright" destination="bugreport" />
         <move element="minicart" destination="header.panel" after="-" />
-        
+       
        
     </body>
 </page>
