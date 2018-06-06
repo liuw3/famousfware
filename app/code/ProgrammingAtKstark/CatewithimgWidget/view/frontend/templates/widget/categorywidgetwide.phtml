@@ -9,19 +9,36 @@
             $image = $cat->getImageUrl();
         ?>
             <?php if($image != null): ?>
-            	<a class="block-promo" href="<?php echo $cat->getUrl(); ?>">
-            		
-            		<span>
+                <a class="block-promo" href="<?php echo $cat->getUrl(); ?>">
+                    
+                    <span id="wider">
                              <span class="info"><strong><?php echo $this->getMainTitle(); ?></strong> </span>
                             <strong class="title"><?php echo $cat->getName(); ?></strong>
                            
+                    
+                    <div>
+                        <button class="action more"><?php echo $this->getTagLine(); ?></button>
+                    </div>
+                        
                     </span>
-                    <div><button class="action more"><?php echo $this->getTagLine(); ?></button></div>
-                    <span class="image"><img src="<?php echo $image; ?>" alt="<?php echo $cat->getName(); ?>" /></span>
+                    <span id="feature-img" class="image"><img src="<?php echo $image; ?>" alt="<?php echo $cat->getName(); ?>" /></span>
                
                 </a>
             <?php endif; ?>
         <?php endforeach; ?>
+        
+      <script > 
+     window.onload = function() {  
 
-       
+            var $ = jQuery.noConflict();
+            
+             if ($(window).width() < 767) {
+            console.log("hello")
+         $('#wider').insertAfter('#feature-img');
+         
+         $('#wider:nth-child(2)').insertAfter('#feature-img:nth-child(2)');
+             }
+     } 
+
+       </script>
        

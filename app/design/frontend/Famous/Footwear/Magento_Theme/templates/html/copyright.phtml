@@ -5,13 +5,24 @@
  */
 ?>
 <small class="copyright">
-    <span class="copyright-left"><?= /* @escapeNotVerified */ $block->getCopyright() ?></span> | 
+    <span class="copyright-left"><?= /* @escapeNotVerified */ $block->getCopyright() ?></span> <span class="for_mob"> | </span>
    <span class="copyright-right"><?= /* @escapeNotVerified */ __('Site By ') ?>
     <strong><a href="http://www.predikkta.com"
        target="_blank">
         <?= /* @escapeNotVerified */ __('Predikkta') ?>
     </a></strong>
     </span>
+
+
+</small>
+
+<small class="copyright-mobile">
+    <?= /* @escapeNotVerified */ $block->getCopyright() ?> |<?= /* @escapeNotVerified */ __('Site By ') ?>
+    <strong><a href="http://www.predikkta.com"
+       target="_blank">
+        <?= /* @escapeNotVerified */ __('Predikkta') ?>
+    </a></strong>
+   
 
 
 </small>
