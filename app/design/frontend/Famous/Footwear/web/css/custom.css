@@ -572,10 +572,10 @@ li.social img {
     font-size: 11px;
 }
 .copyright-right{
-    float: right;
+  float: right; 
 }
 .copyright-left{
-    text-align: left; float: left;
+  text-align: left; float: left;
 }
 .footer .copyright, .footer .bugs {
     display: none;
@@ -699,7 +699,18 @@ li.social img {
       font-size: 80px;
       color: white;
     }
+    
+    .copyright{
+        background-color: none;
+    }
 
+    .copyright-right{
+      float: none; 
+    }
+    
+    .copyright-left{
+      text-align: center; float: none;
+    }
 
 
 }
